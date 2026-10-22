@@ -74,19 +74,6 @@ class MainActivity : BaseActivity() {
         }
     }
 
-    private val requestActivityRecognitionLauncher = registerForActivityResult(
-        ActivityResultContracts.RequestPermission()
-    ) { granted ->
-        if (granted) {
-            appSettings.isFallDetectionEnabled = true
-            startFallDetectionService()
-            Toast.makeText(this, "Fall Detection Enabled & Monitoring", Toast.LENGTH_SHORT).show()
-            homeFragment.refreshDashboardState()
-        } else {
-            Toast.makeText(this, "Permission denied. Fall Detection cannot be enabled.", Toast.LENGTH_LONG).show()
-        }
-    }
-
     private val batteryReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
             try {
@@ -737,16 +724,10 @@ class MainActivity : BaseActivity() {
                         Toast.makeText(this, "Fall Detection Disabled", Toast.LENGTH_SHORT).show()
                         homeFragment.refreshDashboardState()
                     } else {
-                        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACTIVITY_RECOGNITION)
-                            == PackageManager.PERMISSION_GRANTED || Build.VERSION.SDK_INT < Build.VERSION_CODES.Q
-                        ) {
-                            appSettings.isFallDetectionEnabled = true
-                            startFallDetectionService()
-                            Toast.makeText(this, "Fall Detection Enabled & Monitoring", Toast.LENGTH_SHORT).show()
-                            homeFragment.refreshDashboardState()
-                        } else {
-                            requestActivityRecognitionLauncher.launch(Manifest.permission.ACTIVITY_RECOGNITION)
-                        }
+                        appSettings.isFallDetectionEnabled = true
+                        startFallDetectionService()
+                        Toast.makeText(this, "Fall Detection Enabled & Monitoring", Toast.LENGTH_SHORT).show()
+                        homeFragment.refreshDashboardState()
                     }
                 }
                 .setNegativeButton("Cancel", null)

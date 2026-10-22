@@ -153,25 +153,7 @@ class OnboardingPermissionsActivity : BaseActivity() {
             )
         }
 
-        // 5. Activity Recognition (Fall Detection)
-        val activityPerms = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-            listOf(Manifest.permission.ACTIVITY_RECOGNITION)
-        } else {
-            emptyList()
-        }
-        if (activityPerms.isNotEmpty()) {
-            permissionItems.add(
-                OnboardingPermItem(
-                    id = "activity",
-                    permissions = activityPerms,
-                    emoji = "🏃",
-                    title = "Motion & Fall Detection",
-                    description = "Detects severe free-fall impacts and activates protection"
-                )
-            )
-        }
-
-        // 6. Microphone (AI Safety Voice)
+        // 5. Microphone (AI Safety Voice)
         permissionItems.add(
             OnboardingPermItem(
                 id = "audio",

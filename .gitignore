@@ -34,7 +34,7 @@ proguard/
 # Android Studio captures folder
 captures/
 
-# IntelliJ
+# IntelliJ / Android Studio IDE files
 *.iml
 .idea/
 .idea/caches
@@ -44,20 +44,30 @@ captures/
 .idea/navEditor.xml
 .idea/assetWizardSettings.xml
 
-# Keystore files
+# Keystore & Signing files (NEVER commit secrets or release keys to Git)
 *.jks
 *.keystore
+key
+key.txt
 
 # External native build folder generated in Android Studio 2.2 and later
 .externalNativeBuild
 .cxx/
 
-# Google Services (removed but good to ignore just in case)
+# Google Services & Firebase (credentials / private config)
 google-services.json
-
-# Firebase (removed but good to ignore just in case)
 firebase.json
 .firebaserc
 
-# Mac OS X hidden files
+# Mac & Windows OS temporary files
 .DS_Store
+Thumbs.db
+desktop.ini
+
+# Archives & Temporary zip packages
+*.zip
+*.tar
+*.gz
+*.7z
+OneTapSOS_source.zip
+cxvcbvnb_project.zip

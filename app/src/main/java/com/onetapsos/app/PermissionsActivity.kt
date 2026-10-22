@@ -97,14 +97,6 @@ class PermissionsActivity : BaseActivity() {
                 isGranted = isGranted(Manifest.permission.RECORD_AUDIO),
                 icon = "🎤",
                 permissionString = Manifest.permission.RECORD_AUDIO
-            ),
-            PermissionItem(
-                id = "activity",
-                name = "Physical Activity",
-                description = "Powers autonomous fall detection engine",
-                isGranted = isGranted(Manifest.permission.ACTIVITY_RECOGNITION),
-                icon = "🏃",
-                permissionString = Manifest.permission.ACTIVITY_RECOGNITION
             )
         )
 

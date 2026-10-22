@@ -21,8 +21,8 @@ android {
         applicationId = "com.onetapsos.app"
         minSdk = 24
         targetSdk = 36
-        versionCode = 10
-        versionName = "2.1.3"
+        versionCode = 12
+        versionName = "2.1.5"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         

@@ -168,7 +168,6 @@ SECTION 5 — ADS AND PERMISSIONS
 - Location (ACCESS_FINE_LOCATION, ACCESS_COARSE_LOCATION, FOREGROUND_SERVICE_LOCATION)
 - SMS (SEND_SMS)
 - Contacts (READ_CONTACTS)
-- Sensors & Motion (BODY_SENSORS, ACTIVITY_RECOGNITION)
 - Camera & Audio (CAMERA, RECORD_AUDIO)
 - Notifications & System (POST_NOTIFICATIONS, VIBRATE, BIND_QUICK_SETTINGS_TILE, RECEIVE_BOOT_COMPLETED, SCHEDULE_EXACT_ALARM, WAKE_LOCK, REQUEST_IGNORE_BATTERY_OPTIMIZATIONS)
 
@@ -177,7 +176,6 @@ SECTION 5 — ADS AND PERMISSIONS
 - FOREGROUND_SERVICE_LOCATION: Required to maintain uninterrupted GPS tracking and location broadcast during an active emergency SOS session.
 - SEND_SMS: Required to dispatch instant emergency alert text messages directly to your designated trusted contacts when SOS is triggered or low battery alert fires.
 - READ_CONTACTS: Required to let users easily select and import trusted family members and guardians into their emergency contact list.
-- BODY_SENSORS and ACTIVITY_RECOGNITION: Required for the accelerometer-based Fall Detection service to recognize sudden high-impact accidents and start emergency countdowns.
 - CAMERA and RECORD_AUDIO: Required for emergency video/audio evidence logging and safety flashlight utility during crises.
 - POST_NOTIFICATIONS: Required to display ongoing safety status, active SOS notifications, safety timers, and low battery alerts.
 - VIBRATE: Required to provide immediate haptic feedback confirming SOS activation, button holds, and danger countdown ticks.
